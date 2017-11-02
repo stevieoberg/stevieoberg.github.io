@@ -1,0 +1,13 @@
+# Site settings
+title: Stevie Oberg
+email: hi@steviecreates.com
+description: >-
+    Writer. Coder. Creator.
+url: "http://www.steviecreates.com" # the base hostname & protocol for your site, e.g. http://example.com
+twitter: sgtoctopus
+github: sgtoctopus
+
+# Build settings
+markdown: kramdown
+plugins:
+    - jekyll-feed

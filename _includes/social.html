@@ -1,0 +1,26 @@
+<div class="icons-header">
+    <div class="icon">
+        <a href="https://twitter.com/{{ site.twitter }}" class="social" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Twitter">
+            <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div class="icon">
+        <a href="https://github.com/{{ site.github }}" class="social" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Github">
+            <i class="fa fa-github fa-2x" alt="github" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div class="icon">
+        <a href="/projects" class="social" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Projects">
+            <i class="fa fa-folder-open fa-2x" aria-hidden="true"></i>
+
+        </a>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("body").tooltip({
+            selector: '[data-toggle=tooltip]'
+        });
+    });
+</script>

@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
+:root {
+    --background: url("/img/broken_noise.png");
+    --main: #ffffff;
+    --second: rgb(140, 140, 140);
+    --font-family: 'Share Tech Mono', monospace;
+}
+
+body {
+    background-image: var(--background);
+    color: var(--main);
+    font-family: var(--font-family);
+}
+
+.content {
+    z-index: 1;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 auto;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+hr {
+    height: 2px;
+    border-radius: 1px;
+    color: var(--second);
+    min-width: 2rem;
+    background-color: var(--second);
+    width: 60%;
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.icons-header {
+    display: flex;
+    justify-content: center
+}
+
+.icons-header .icon {
+    margin: 0 1rem;
+}
+
+a {
+    color: var(--main);
+}
+
+a:hover {
+    color: var(--second)
+}
+
+.tooltip {
+    font-family: var(--font-family);
+    font-size: .5rem;
+}
+
+.tooltip .tooltip-inner {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.tooltip.bottom .tooltip-arrow {
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
