@@ -8,4 +8,4 @@ url:
 
 [Picard Biography](/picard_biography)
 
-[Famous New Orleans Sno-Balls](/snowballs)
+[Famous New Orleans Sno-Balls](/snoballs)
