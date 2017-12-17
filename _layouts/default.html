@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
     <!-- Font Awesome -->
-    <script src="https://use.fontawesome.com/cfe385fa20.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 
     <!-- Custom CSS -->
@@ -20,17 +22,17 @@
 
 <body>
     <div class="container">
+        <nav class="text-center" markdown="1">
+            <h1 id="title">Stevie Oberg<br /><small class="text-muted">{{ site.description }}</small></h1>
+        </nav>
+        <hr />
         <div class="content">
-            {{ content }} {% if page.url != "/" %}
-            <hr />
-            <nav class="align-self-center">
-                <a class="nav-link" href="/"><i class="fa fa-home" aria-hidden="true"></i></a>
-            </nav>
-            {% endif %}
+            {{ content }}
         </div>
+        {% if page.url != "/" %}
+        <hr />
+        <a class="nav-link align-self-center text-center icon" href="/"><i class="fa fa-home" aria-hidden="true"></i></a> {% endif %}
     </div>
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
