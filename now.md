@@ -16,4 +16,4 @@ __These are my main priorities right now.__
 
 I am open to considering new opportunities as I'm eager to learn and grow in my field.
 
-<small class="text-muted">If my activities or priorities change, this page will reflect it. Last updated: December 16, 2017</small>
+<small class="text-muted">If my activities or priorities change, this page will reflect it. Last updated: January 16, 2018</small>
