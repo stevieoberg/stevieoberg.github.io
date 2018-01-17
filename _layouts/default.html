@@ -1,8 +1,7 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <title>{{ site.title }}</title>
+    <title>{{ site.title }} {% if page.title %} - {{ page.title }} {% endif %}</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,10 +22,15 @@
 <body>
     <div class="container">
         <nav class="text-center" markdown="1">
-            <h1 id="title">Stevie Oberg<br /><small class="text-muted">{{ site.description }}</small></h1>
+            <h1 id="title">{{ site.title }}<br /><small class="text-muted">{{ site.description }}</small></h1>
         </nav>
         <hr />
         <div class="content">
+            <div class="metadata">
+                {% if page.title %} <h2>{{ page.title }}</h2> {% endif %}
+                {% if page.subtitle %} <small class="text-muted">{{ page.subtitle }}</small> {% endif %}
+                {% if page.date %} <small class="text-muted">{{ page.date | date_to_long_string }}</small> {% endif %}
+            </div>
             {{ content }}
         </div>
         {% if page.url != "/" %}
@@ -39,5 +43,4 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </body>
-
 </html>
