@@ -30,6 +30,30 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
 }
 
+#posts {
+    margin: 4rem 0 4rem 0;
+}
+
+.list-group-item {
+    background-color: transparent;
+    border-radius: 0;
+    color: #fff;
+}
+
+.list-group-item:hover {
+    background-color:rgba(255, 255, 255, 0.05);
+    border-radius: 0;
+    color: #fff;
+}
+
+.fa-arrow-circle-left {
+    margin-right: 1rem;
+}
+
+.fa-arrow-circle-right {
+    margin-left: 1rem;
+}
+
 nav {
     margin: 10em auto 2.5em auto;
 }
@@ -67,7 +91,8 @@ strong {
 }
 
 a:hover {
-    color: var(--accent1)
+    color: var(--accent1);
+    text-decoration: none;
 }
 
 .tooltip {

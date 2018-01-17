@@ -6,8 +6,10 @@ layout: default
 <small class="text-muted">(inspired by [Derek Sivers](http://nownownow.com/))</small>
 
 * My career
-* Figuring out adult life as a new grad (December 2016) and a married woman (April 2017)
-* [Reading](https://www.goodreads.com/user/show/3214334-stevie-oberg)
+* Personal Development via:
+    - Working Out
+    - Eating Right
+    - [Reading](https://www.goodreads.com/user/show/3214334-stevie-oberg)
 * Writing
 
 __These are my main priorities right now.__

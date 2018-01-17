@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<h2>{{ page.title }}</h2>
+<small class="text-muted">{{ page.date | date_to_long_string }}</small>
+
+<div id="posts">
+    {{ content }}
+</div>
+
+<div class="prevnext clearfix">
+    {% if page.previous.url %}
+        <small>
+            <a class="float-left" href="{{page.previous.url}}"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i>{{ page.previous.title }}</a>
+        </small>
+    {% endif %}
+    {% if page.next.url %}
+        <small>
+            <a class="float-right" href="{{page.next.url}}">{{page.next.title}} <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+        </small>
+    {% endif %}
+</div>
