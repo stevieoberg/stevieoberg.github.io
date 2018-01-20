@@ -10,7 +10,7 @@
 }
 
 html {
-    font-size: 1em;
+    font-size: 14px;
 }
 
 body {
@@ -19,13 +19,24 @@ body {
     background-image: var(--background);
     color: var(--main);
     font-family: var(--font-family);
+    text-align: justify;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--accent-font);
 }
 
-.metadata {
+img {
+    max-width: 100%;
+    max-height: auto;
+}
+
+.img-thumbnail {
+    max-width: 10rem;
+    max-height: 10rem
+}
+
+.metadata, section img {
     margin-bottom: 2rem;
 }
 
@@ -34,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
 }
 
-#posts {
+.list-group {
     margin: 4rem 0 4rem 0;
 }
 

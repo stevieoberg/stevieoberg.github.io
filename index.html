@@ -4,13 +4,34 @@ layout: default
 
 {% include social.html %}
 
-<div id="posts" class="list-group">
-    {% for post in site.posts limit:5 %}
+{% assign psize = site.posts | size %}
+{% if psize != 0 %}
+<div id="posts" class="list-group list-group-flush">
+    <h2>Posts</h2>
+    {% assign posts = site.posts | reverse %}
+    {% for post in posts limit:5 %}
         <a href="{{ post.url }}" class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1">{{ post.title }}</h5>
-                <small class="text-muted">{{ post.date | date_to_string }}</small>
+                <small class="text-muted">{{ post.date | date: "%B %-d, %Y" }}</small>
             </div>
         </a>
     {% endfor %}
 </div>
+{% endif %}
+
+{% assign psize = site.projects | size %}
+{% if psize != 0 %}
+<div id="projects" class="list-group list-group-flush">
+    <h2><i class="fas fa-terminal"></i> Projects</h2>
+    {% assign projects = site.projects | reverse %}
+    {% for project in projects limit:5 %}
+        <a href="{{ project.url }}" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">{{ project.title }}</h5>
+                <small class="text-muted">{{ project.date | date: "%B %-d, %Y" }}</small>
+            </div>
+        </a>
+    {% endfor %}
+</div>
+{% endif %}
