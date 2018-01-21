@@ -1,11 +1,10 @@
 ---
-layout: default
+layout: collections
 ---
-<main class="project">
-	<section id="contact-content">
-        <a href="{{ page.link }}">
-    		<img id="project-image" src="{{ site.baseurl }}/img/{{ page.image }}">
-        </a>
-            {{ content }}
-	</section>
-</main>
+
+<section>
+	<img id="project-image" src="{{ site.baseurl }}/img/{{ page.image }}">
+    <section>
+        {{ content }}
+    </section>
+</section>

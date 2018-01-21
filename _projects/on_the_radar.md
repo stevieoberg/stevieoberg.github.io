@@ -1,9 +1,8 @@
 ---
-layout: project
 title: On the Radar
 date: December 10, 2015
 subtitle: Software Engineering I Project
-image: on_the_radar.png
+image: projects/on_the_radar.png
 ---
 
 # The Problem

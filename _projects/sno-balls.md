@@ -1,8 +1,9 @@
 ---
-layout: project
 title: SnoBalls
 date: December 11, 2016
-image: sno_balls.png
+image: projects/sno_balls.png
+demo: /sno_balls
+repo: https://github.com/sgtoctopus/snoballs
 ---
 
 # About

@@ -1,10 +1,10 @@
 ---
-layout: project
 title: Picard Biography
 date: October 12, 2016
 subtitle: Typography Bio Page
-image: picard_biography.png
-link: http://www.steviecreates.com/picard_biography
+image: projects/picard_biography.png
+demo: http://www.steviecreates.com/picard_biography
+repo: https://github.com/sgtoctopus/picard_biography
 ---
 
 # About

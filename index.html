@@ -2,36 +2,32 @@
 layout: default
 ---
 
-{% include social.html %}
-
-{% assign psize = site.posts | size %}
-{% if psize != 0 %}
-<div id="posts" class="list-group list-group-flush">
-    <h2>Posts</h2>
-    {% assign posts = site.posts | reverse %}
-    {% for post in posts limit:5 %}
-        <a href="{{ post.url }}" class="list-group-item list-group-item-action flex-column align-items-start">
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">{{ post.title }}</h5>
-                <small class="text-muted">{{ post.date | date: "%B %-d, %Y" }}</small>
+{% for collection in site.collections %}
+    {% assign csize = collection.docs | size %}
+    {% if csize != 0 %}
+        <section>
+            <div class="list-group list-group-flush">
+                <h1>
+                    <a href="{{ collection.label }}">
+                        <i class="{{ collection.icon }}"></i> {{ collection.title }}
+                    </a>
+                </h1>
+                {% assign items = collection.docs | reverse %}
+                {% for item in items limit:5 %}
+                    <a href="{{ item.url }}" class="list-group-item">
+                        <div class="media">
+                            <img class="mr-3" src="{{ item.image | prepend: 'img/' }}" />
+                            <div class="media-body">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h2 class="mb-1 mt-0">{{ item.title }}</h2>
+                                    <small class="text-muted">{{ item.date | date: '%b %d, %Y' }}</small>
+                                </div>
+                                <p class="card-text">{{ item.caption }}</p>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
             </div>
-        </a>
-    {% endfor %}
-</div>
-{% endif %}
-
-{% assign psize = site.projects | size %}
-{% if psize != 0 %}
-<div id="projects" class="list-group list-group-flush">
-    <h2><i class="fas fa-terminal"></i> Projects</h2>
-    {% assign projects = site.projects | reverse %}
-    {% for project in projects limit:5 %}
-        <a href="{{ project.url }}" class="list-group-item list-group-item-action flex-column align-items-start">
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">{{ project.title }}</h5>
-                <small class="text-muted">{{ project.date | date: "%B %-d, %Y" }}</small>
-            </div>
-        </a>
-    {% endfor %}
-</div>
-{% endif %}
+        </section>
+    {% endif %}
+{% endfor %}

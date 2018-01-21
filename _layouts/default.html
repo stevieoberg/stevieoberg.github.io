@@ -21,23 +21,19 @@
 
 <body>
     <div class="container">
-        <nav class="text-center" markdown="1">
-            <h1 id="title">{{ site.title }}<br /><small class="text-muted">{{ site.description }}</small></h1>
-        </nav>
-        <hr />
-        <div class="content">
-            <div class="metadata">
-                <h2>
-                    {% if page.title %} {{ page.title }} {% endif %}
-                {% if page.subtitle %} <small class="text-muted">{{ page.subtitle }}</small> {% endif %}
-                </h2>
-                {% if page.date %} <small class="text-muted">{{ page.date | date_to_long_string }}</small> {% endif %}
-            </div>
+
+        {% include header.html navclass="text-center" %}
+
+        <main>
             {{ content }}
-        </div>
-        {% if page.url != "/" %}
-        <hr />
-        <a class="nav-link align-self-center text-center icon" href="/"><i class="fa fa-home" aria-hidden="true"></i></a> {% endif %}
+        </main>
+        <footer class="text-center">
+            {% if page.url != "/" %}
+            <a href="/"><i class="fa fa-home" aria-hidden="true"></i></a>
+            {% else %}
+                <i class="fas fa-bolt"></i>
+            {% endif %}
+        </footer>
     </div>
 
     <!-- Optional JavaScript -->

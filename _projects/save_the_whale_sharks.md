@@ -1,9 +1,9 @@
 ---
-layout: project
 title: Save the WhaleSharks
 date: November 14, 2016
-image: save_the_whalesharks.png
-link: http://www.steviecreates.com/savethewhalesharks
+image: projects/save_the_whalesharks.png
+demo: http://www.steviecreates.com/savethewhalesharks
+repo: https://github.com/sgtoctopus/savethewhalesharks
 ---
 
 # About
