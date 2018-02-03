@@ -1,20 +1,16 @@
 language: ruby
-
 install:
-  # Install Jekyll and dependencies
-  - bundle install
-
+- bundle install
 script: bundle exec rake site:deploy --quiet
-
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: "$GH_TOKEN"
+  local_dir: _site
+  target_branch: master
+  on:
+    branch: source
+  committer-from-gh: true
 env:
   global:
-    secure: PLwM/kgkamYQU5n2fSHi725RmsYdj+DYDwn/XiB9aJiAVMJoc74IiA7UnoXtjgCt5xREs2IWj+arD7OpWsUqqAQZ9Sy7XEIl8T5GjAuptl80Df3TgvmBtJywv1m4Z+x4fsgITFh+B1Z976FDb2t7ZieW2ULyE0IT/OpVA2E4idXESSCDuYhf71mpzM+SvUepJYGQ9Qr6+wRmvQgVwmcaPJO3qkAHqbFZOZYDNXdQ45e2aJrsIEMgwoR5Cv/6LSqmVKeRNve/bPVA9RYXeQhzCkT6uFZ35G7kU/pCNhbOGTumkTl/Qkghjle1LoL2DniFnXRS/HLYpbUd/zN69VZ2D46Jn6Bt/fGi1dBmDmaM8QxAsFRJUkkD3oHxOPl4hsUAcNMYP39B6LdZfGmXMwBMS3/ALXKRlTJl/tzGMSG6wQkXel1zlI1WqU24yLlfJpKJsaoEm6hHeXNEXPz1P5Ozj/XL0S5al53TPwzRvRDeejb5NS4tCc50O/fpIZJ8VsoAIyz587s0G+KZmio8I6+VSbz2d9YRiF6vHTihyB4zp6idXY1Iy7oJdOi3CJpBMoe6GQZzgp6f7adX0JE9aLd+StoSpd5sBNSAIF+RhT7wLshgjKNqv8XabUnDDB0gRV2eIjvUupYACiGmftt0rdepSIWlcYdBd5/P3A/c6XCwlwA=
-# deploy:
-#     provider: pages
-#     skip_cleanup: true
-#     github_token: "$GITHUB_TOKEN"
-#     local_dir: _site
-#     target_branch: master
-#     on:
-#         branch: source
-#     committer-from-gh: true
+    secure: Cnx0WMGL6q6DX91pgf4eKUOmYr7HnGvZJeO62RZREWRj43VMGdDIqhAzqKRf6o3ms03Myldx9BrhrpqZCbiVR8Wnfu2fmR40jfuobTczvqIGOQwGjAShGZiR+t7f7Ah3hfQKUunF8OVn+ARR68uzVkpnYqFoo2ACzgNaUe1ykCuSOoDyQhSEQYUCK4mmyvLQMRQ3apeW3TX97/SVymSppPS7wZc9Q8EAeSeEZ56xwBBeMdsisHZIxqb/Q+NleJReJPApacoSB2ZJy42ZikFniCYy/7h3W+6Ufz/5LgP5wKbB+qeAnJl/BqPVyShNbGHscIGoKHLe0GEWk52FDsuguWaCsR+Dnnb67f4k5JIuY4LrJyi3MHfRo/Zh/bovZhbVQfPCPvEdduz8qWXrn3o9Nn4d9mvH7NWMBNDuk3y0cKpvrCYI9KXDvXRtYSeXmPJC5JkyGrYgvgVuO8U86WtD8LhnJoCHAFuZdhcQsHOP54BM30qyRnN7M2ppXYalHgpzhU30In9SSgnDyRD4j9RRfX8UFuWnrNCq/PvY91miZ3JYGKm1+dNMCHhAwAriRV93rABGVLkT7pgnGDmIJRzUw0XAEOj7BKLsFBMoM/3OfIiRYuCfimpXYb4+0olxrgnQ1opWz8aPV9iZEqYOQIA78oNMlMb4UK5REpt4EGoMkGM=
