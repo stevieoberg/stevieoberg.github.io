@@ -1,16 +1,15 @@
 language: ruby
-cache: bundler
 install:
-- bundle install
+    - bundle install
 deploy:
     provider: pages
     skip_cleanup: true
-    github_token: $GITHUB_TOKEN
+    github_token: "$GITHUB_TOKEN"
     local_dir: _site
     target_branch: master
     on:
         branch: source
+    committer-from-gh: true
 env:
-    global:
-        - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-sudo: false
+  global:
+    secure: PLwM/kgkamYQU5n2fSHi725RmsYdj+DYDwn/XiB9aJiAVMJoc74IiA7UnoXtjgCt5xREs2IWj+arD7OpWsUqqAQZ9Sy7XEIl8T5GjAuptl80Df3TgvmBtJywv1m4Z+x4fsgITFh+B1Z976FDb2t7ZieW2ULyE0IT/OpVA2E4idXESSCDuYhf71mpzM+SvUepJYGQ9Qr6+wRmvQgVwmcaPJO3qkAHqbFZOZYDNXdQ45e2aJrsIEMgwoR5Cv/6LSqmVKeRNve/bPVA9RYXeQhzCkT6uFZ35G7kU/pCNhbOGTumkTl/Qkghjle1LoL2DniFnXRS/HLYpbUd/zN69VZ2D46Jn6Bt/fGi1dBmDmaM8QxAsFRJUkkD3oHxOPl4hsUAcNMYP39B6LdZfGmXMwBMS3/ALXKRlTJl/tzGMSG6wQkXel1zlI1WqU24yLlfJpKJsaoEm6hHeXNEXPz1P5Ozj/XL0S5al53TPwzRvRDeejb5NS4tCc50O/fpIZJ8VsoAIyz587s0G+KZmio8I6+VSbz2d9YRiF6vHTihyB4zp6idXY1Iy7oJdOi3CJpBMoe6GQZzgp6f7adX0JE9aLd+StoSpd5sBNSAIF+RhT7wLshgjKNqv8XabUnDDB0gRV2eIjvUupYACiGmftt0rdepSIWlcYdBd5/P3A/c6XCwlwA=
