@@ -10,5 +10,3 @@ deploy:
     target_branch: master
     on:
         branch: dev
-script:
-- "./build.sh"
