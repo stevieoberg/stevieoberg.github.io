@@ -1,7 +1,7 @@
 ---
 layout: art
 title: Jurassic Planet
-date: April 12, 2016
+date: April 12, 2015
 image: /ART105/Project05-01.png
 caption: "A perspective design for the site Threadless."
 images:

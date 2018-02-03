@@ -1,7 +1,7 @@
 ---
 layout: art
 title: Tessellated
-date: March 31, 2016
+date: March 31, 2015
 image: /ART105/Project04-02.png
 caption: "An experiment of shapes and colors"
 images:

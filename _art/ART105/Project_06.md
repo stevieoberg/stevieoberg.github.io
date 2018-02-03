@@ -1,9 +1,9 @@
 ---
 layout: art
 title: A Shining Future
-date: April 12, 2016
+date: April 12, 2015
 image: /ART105/Project06-01.png
-caption: "A perspective design for the site Threadless."
+caption: "An album cover design."
 images:
   - path: /img/ART105/Project06-01.png
     id: project06-01

@@ -1,7 +1,7 @@
 ---
 layout: art
 title: Milwaukee Flag Design
-date: March 15, 2016
+date: March 15, 2015
 image: /ART105/Project03-04.png
 caption: "My submissions for the new Milwaukee Flag."
 images:
