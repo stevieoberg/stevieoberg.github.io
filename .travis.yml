@@ -1,15 +1,13 @@
 language: ruby
 install:
 - bundle install
-# script: bundle exec rake site:deploy --quiet
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: "$GH_TOKEN"
-  # local_dir: _site
   target_branch: master
+  fqdn: www.steviecreates.com # This updates the repository settings in GitHub and also adds a CNAME file in the master branch
+  keep-history: true
+  verbose: true
   on:
     branch: source
-env:
-  global:
-    secure: Cnx0WMGL6q6DX91pgf4eKUOmYr7HnGvZJeO62RZREWRj43VMGdDIqhAzqKRf6o3ms03Myldx9BrhrpqZCbiVR8Wnfu2fmR40jfuobTczvqIGOQwGjAShGZiR+t7f7Ah3hfQKUunF8OVn+ARR68uzVkpnYqFoo2ACzgNaUe1ykCuSOoDyQhSEQYUCK4mmyvLQMRQ3apeW3TX97/SVymSppPS7wZc9Q8EAeSeEZ56xwBBeMdsisHZIxqb/Q+NleJReJPApacoSB2ZJy42ZikFniCYy/7h3W+6Ufz/5LgP5wKbB+qeAnJl/BqPVyShNbGHscIGoKHLe0GEWk52FDsuguWaCsR+Dnnb67f4k5JIuY4LrJyi3MHfRo/Zh/bovZhbVQfPCPvEdduz8qWXrn3o9Nn4d9mvH7NWMBNDuk3y0cKpvrCYI9KXDvXRtYSeXmPJC5JkyGrYgvgVuO8U86WtD8LhnJoCHAFuZdhcQsHOP54BM30qyRnN7M2ppXYalHgpzhU30In9SSgnDyRD4j9RRfX8UFuWnrNCq/PvY91miZ3JYGKm1+dNMCHhAwAriRV93rABGVLkT7pgnGDmIJRzUw0XAEOj7BKLsFBMoM/3OfIiRYuCfimpXYb4+0olxrgnQ1opWz8aPV9iZEqYOQIA78oNMlMb4UK5REpt4EGoMkGM=
