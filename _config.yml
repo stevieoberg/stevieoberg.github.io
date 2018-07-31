@@ -1,52 +1,45 @@
-# Site settings
+# Site Metadata
 title: Stevie Oberg
 email: hi@steviecreates.com
 description: >-
-    Writer. Coder. Creator.
+    Coder. Writer. Creator.
 url: "http://www.steviecreates.com/"
-twitter: sgtoctopus
-github: sgtoctopus
+twitter: stevieoberg
 
-destination: ../_site
-
+# Site Settings
 collections:
-    projects:
-        title: Projects
-        output: true
-        icon: "fas fa-terminal"
-    art:
-        title: Art
-        output: true
-        icon: "fas fa-paint-brush"
-    posts:
-        title: Blog
-        output: false
-
+  posts:
+    output: true
 defaults:
-    - scope:
-        path: "_projects"
-      values:
-        layout: project
-    - scope:
-        path: "_art"
-      values:
-        layout: art
+    - values:
+        layout: default
     - scope:
         path: "_posts"
       values:
         layout: post
 
 # Build settings
+pre-commit:
+    - check: FrontMatterVariableExists
+      variables: ['description', 'image']
+    - check: FrontMatterVariableIsNotDuplicate
+      variables: ['description']
+    - check: FrontMatterVariableMeetsLengthRequirements
+      variables: ['description', 'title']
+    - check: NoDuplicateTags
+
 markdown: kramdown
 plugins:
     - jekyll-feed
 
+include:
+    - _pages
 exclude:
-  - README.md
-  - Rakefile
-  - Gemfile
-  - Gemfile.lock
-  - changelog.md
-  - "*.Rmd"
-  - vendor
-  - .travis.yml
+    - README.md
+    - Rakefile
+    - Gemfile
+    - Gemfile.lock
+    - changelog.md
+    - "*.Rmd"
+    - vendor
+    - .travis.yml
