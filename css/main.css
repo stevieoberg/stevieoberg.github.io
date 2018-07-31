@@ -1,156 +1,138 @@
-@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
-
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Roboto:300,400');
 :root {
-    --background: url("/img/broken_noise.png");
-    --main: rgb(200, 200, 200);
-    --accent1: rgb(140, 140, 140);
-    --accent2: rgb(189, 165, 217);
-    --accent-font: 'Share Tech Mono', monospace;
-    --border: .15em solid var(--accent1);
+    --background-color: #191e27;
+    --main_accent: #afafbf;
+    --light_accent: #ffffff;
+    --code_accent: #333945;
+    --dark_accent: #838181;
+    --purple_accent: #856db9;
+    --border: 1px solid var(--main);
+    --font: 'Roboto', sans-serif;
+    --code-font: 'Inconsolata', monospace;
 }
 
 /* BASE */
+
 body {
-    background-image: var(--background);
-    color: var(--main);
+    background-color: var(--purple_accent);
+    color: var(--main_accent);
+    margin: 5em auto;
+    font-family: var(--font);
+    font-size: 14px;
+    line-height: 1.8;
+    width: 75%;
+    max-width: 62em;
+    letter-spacing: 1px;
     font-weight: 300;
-    line-height: 1.5em;
-    text-align: justify;
 }
 
-.container {
-    width: auto;
-    max-width: 42em;
-}
-
-nav {
-    margin: 6em auto 2.5em auto;
-    padding-bottom: 2em;
+a {
     border-bottom: var(--border);
+    color: #3a92c8;
+    text-decoration: none;
 }
 
-nav h1 {
-    font-size: 2.75rem;
+a:hover {
+    color: var(--light_accent);
+    text-decoration: none;
 }
+
+/* SITE HEADER */
 
 header {
+    display: block;
     margin-bottom: 1.5em;
+    font-size: 1.75rem;
 }
 
-header h1 {
-    font-size: 2rem;
-    margin-bottom: 0;
+header a {
+    color: var(--background-color);
 }
+
+header small {
+    color: var(--main_accent);
+    font-size: 1rem;
+    line-height: 3.15rem;
+    float: right;
+}
+
+header::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+/* SITE CONTENT */
 
 main {
-    max-width: 40em;
-    margin: 0 auto;
+    border-top: 20px solid #afafbf;
+    border-radius: 5px;
+    background: var(--background-color);
+    padding: 1em;
 }
+
+/* headers */
+
+h1, h2, h3, h4, h5, h6, b {
+    font-weight: 600;
+    font-family: var(--code-font);
+    color: var(--purple_accent);
+}
+
+h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
+    content: "> ";
+}
+
+/* misc */
+
+code {
+    background: var(--code_accent);
+}
+
+blink {
+    animation: blink 1.25s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0
+    }
+    49% {
+        opacity: 0
+    }
+    50% {
+        opacity: 1
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+li p {
+    margin: .1em;
+}
+
+/* nav */
+
+nav {
+    text-align: center;
+}
+
+#social {
+    text-align: center;
+    margin: 2.5em auto 2em auto;
+}
+
+#social i {
+    padding: 0em .5em;
+}
+
+/* SITE FOOTER */
 
 footer {
     border-top: var(--border);
     margin-top: 2.25em;
-    padding: 1.75em 0em 4em 0em;
-}
-
-/* ATTRIBUTES */
-strong {
-    font-family: var(--accent-font);
-}
-
-a {
-    color: var(--main);
-}
-
-p a {
-    color: var(--accent2);
-}
-
-a:hover {
-    color: var(--accent1);
-    text-decoration: none;
-}
-
-hr {
-    height: 2px;
-    border-radius: 1px;
-    color: var(--accent1);
-    min-width: 2rem;
-    background-color: var(--accent1);
-    width: 60%;
+    padding: 1.5em 0em 4em 0em;
     text-align: center;
-    margin: 2rem auto;
-}
-
-/* HEADERS */
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--accent-font);
-    margin-top: 2rem;
-}
-
-h1 {
-    font-size: 1.25rem;
-}
-
-h2 {
-    font-size: 1.1rem;
-}
-
-h3, h4, h5, h6 {
-    font-size: 1rem;
-}
-
-/* IMAGES */
-img {
-    max-width: 100%;
-    max-height: auto;
-}
-
-/* COLLECTIONS */
-section {
-    margin: 2rem auto;
-}
-
-.list-group {
-    margin: 4rem 0 4rem 0;
-}
-
-.list-group img {
-    max-width: 4rem;
-}
-
-.list-group-item {
-    background-color: transparent;
-    border-radius: 0;
-    color: var(--main);
-}
-
-.list-group-item:hover {
-    background-color:rgba(255, 255, 255, 0.05);
-    border-radius: 0;
-    color: var(--main);
-}
-
-@media (max-width: 576px) {
-    .card-columns {
-        column-count: 2;
-    }
-}
-
-@media (min-width: 768px) {
-    .card-columns {
-        column-count: 2;
-    }
-}
-
-@media (min-width: 992px) {
-    .card-columns {
-        column-count: 3;
-    }
-}
-
-@media (min-width: 1200px) {
-    .card-columns {
-        column-count: 3;
-    }
 }
