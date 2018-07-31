@@ -2,6 +2,7 @@
 layout: default
 title: What I'm doing Now
 subtitle: page inspired by <a href="http://nownownow.com/">Derek Sivers</a>
+permalink: "/now"
 ---
 
 My priorities right now are:
