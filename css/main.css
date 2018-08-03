@@ -43,6 +43,8 @@ header {
     display: block;
     margin-bottom: 1.5em;
     font-size: 1.75rem;
+    font-weight: bold;
+    letter-spacing: .06em;
 }
 
 header a {
