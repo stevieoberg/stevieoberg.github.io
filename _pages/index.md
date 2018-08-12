@@ -10,16 +10,16 @@ Hi! I’m **Stevie Oberg** and I like creating things that are useful and/or bea
 
 <div id="social">
     <a href="https://github.com/{{ site.username }}">
-        <i class="fab fa-github fa-2x"></i>
+        <i class="fab fa-github"></i>
     </a>
     <a href="https://twitter.com/{{ site.username }}">
-        <i class="fab fa-twitter fa-2x"></i>
+        <i class="fab fa-twitter"></i>
     </a>
     <a href="https://www.linkedin.com/in/{{ site.username }}">
-        <i class="fab fa-linkedin-in fa-2x"></i>
+        <i class="fab fa-linkedin-in"></i>
     </a>
     <a href="/feed.xml">
-        <i class="fas fa-rss fa-2x"></i>
+        <i class="fas fa-rss"></i>
     </a>
 </div>
 

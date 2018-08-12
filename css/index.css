@@ -11,8 +11,9 @@
 
 #social {
     text-align: center;
-    margin: 2.5em auto 2em auto;
+    margin: 2em auto 1.5em auto;
     font-weight: normal;
+    font-size: 1.75em;
 }
 
 #social i {
