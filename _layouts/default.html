@@ -8,6 +8,11 @@
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="{{ site.url }}/css/main.css" />
+        {% if page.custom_css %}
+            {% for style in page.custom_css %}
+                <link rel="stylesheet" href="{{ site.url }}/css/{{ style }}.css">
+            {% endfor %}
+        {% endif %}
     </head>
     <body>
         <div id="content">

@@ -1,23 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata|Roboto:300,400');
 :root {
-    --background-color: #191e27;
-    --main_accent: #afafbf;
-    --light_accent: #ffffff;
-    --code_accent: #333945;
-    --dark_accent: #838181;
-    --purple_accent: #5F5785;
-    --border: 1px solid var(--main);
-    --font: 'Roboto', sans-serif;
+    --terminal-color: #191e27;
+    --font-color: #afafbf;
+    --light-grey: #ebe6e6;
+    --purple: #5F5785;
+    --dark-grey: #333945;
+    --pink: #c17bb8;
     --code-font: 'Inconsolata', monospace;
 }
 
 /* BASE */
 
 body {
-    background-color: var(--purple_accent);
-    color: var(--main_accent);
+    background-color: var(--purple);
+    color: var(--font-color);
     margin: 5em auto 1em auto;
-    font-family: var(--font);
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     line-height: 1.8;
     max-width: 800px;
@@ -26,17 +24,31 @@ body {
 }
 
 a {
-    border-bottom: var(--border);
     color: #3a92c8;
     text-decoration: none;
+    font-weight: bold;
 }
 
 a:hover {
-    color: var(--light_accent);
-    text-decoration: none;
+    color: var(--white);
 }
 
-/* SITE HEADERS */
+h1, h2, h3, h4, h5, h6, b {
+    font-weight: 600;
+    font-family: var(--code-font);
+    color: var(--purple);
+}
+
+h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
+    content: "> ";
+    color: var(--pink);
+}
+
+strong, em {
+    color: var(--pink);
+}
+
+/* HEADER */
 
 header {
     display: block;
@@ -47,11 +59,10 @@ header {
 }
 
 header a {
-    color: var(--background-color);
+    color: var(--terminal-color);
 }
 
 header small {
-    color: var(--main_accent);
     font-size: 1rem;
     line-height: 3.15rem;
     float: right;
@@ -63,17 +74,7 @@ header::after {
     clear: both;
 }
 
-h1, h2, h3, h4, h5, h6, b {
-    font-weight: 600;
-    font-family: var(--code-font);
-    color: var(--purple_accent);
-}
-
-h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
-    content: "> ";
-}
-
-/* SITE CONTENT */
+/* CONTENT */
 
 #content {
     margin-right: 1em;
@@ -81,53 +82,33 @@ h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
 }
 
 main {
-    border-top: 20px solid #afafbf;
+    border-top: 20px solid var(--font-color);
     border-radius: 5px;
-    background: var(--background-color);
+    background: var(--terminal-color);
     padding: 1em;
     min-height: 45em;
 }
 
-/* misc */
-
-code {
-    background: var(--code_accent);
-}
+/* IMAGES */
 
 img {
     max-width: 100%;
+}
+
+/* MISC */
+
+code {
+    background: var(--dark-grey);
+    font-family: var(--code-font);
 }
 
 li p {
     margin: .1em;
 }
 
-#selfie {
-    width: 13em;
-    border-radius: 50%;
-    margin: 0 auto;
-    display: block;
-}
-
-/* nav */
-
-nav {
-    text-align: center;
-}
-
-#social {
-    text-align: center;
-    margin: 2.5em auto 2em auto;
-}
-
-#social i {
-    padding: 0em .5em;
-}
-
-/* SITE FOOTER */
+/* FOOTER */
 
 footer {
-    border-top: var(--border);
     margin-top: 2.25em;
     padding: 1.5em 0em 4em 0em;
     text-align: center;

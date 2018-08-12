@@ -1,0 +1,31 @@
+/* POSTS */
+
+#metadata {
+    display: block;
+    margin-bottom: 1.5em;
+    font-weight: bold;
+    letter-spacing: .06em;
+}
+
+#metadata h1 {
+    font-size: 2.5em;
+    margin-bottom: 0;
+    display: inline;
+}
+
+#metadata small {
+    font-style: italic;
+    float: right;
+}
+
+#metadata::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+/* nav */
+
+nav {
+    text-align: center;
+}
