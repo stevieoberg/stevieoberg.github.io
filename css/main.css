@@ -44,8 +44,12 @@ h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
     color: var(--pink);
 }
 
-strong, em {
+strong, em, blockquote {
     color: var(--pink);
+}
+
+blockquote {
+    font-style: italic;
 }
 
 /* HEADER */
