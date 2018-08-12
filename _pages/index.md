@@ -2,6 +2,7 @@
 permalink: "/"
 ---
 
+
 ![Its a Me, Stevie](/img/selfie.jpg){: #selfie }
 
 Hi! I’m **Stevie Oberg** and I like creating things that are useful and/or beautiful. Usually using code but also through art and writing. I'm currently working as an **IT Developer** but one day I hope to combine my love of tech and books to become a Librarian.
@@ -25,3 +26,21 @@ Hi! I’m **Stevie Oberg** and I like creating things that are useful and/or bea
 {% for post in site.posts %}
 - **[{{ post.title }}]({{ post.url }})** <small>{{ post.date | date_to_long_string }}</small>
 {% endfor %}
+
+# <span id="terminal" onclick="surprise()"></span>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/1.0.0/typewriter.js"></script>
+
+<script>
+    var terminal = document.getElementById('terminal');
+    var typewriter = new Typewriter(terminal, {
+        cursor: '_'
+    });
+
+    function surprise() {
+        typewriter.typeString('Hello! ;)')
+            .pauseFor(2500)
+            .deleteAll()
+            .start();
+    }
+</script>
