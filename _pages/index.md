@@ -25,8 +25,8 @@ Hi! I’m **Stevie Oberg** and I like creating things that are useful and/or bea
 
 # Thoughts
 {% for post in site.posts %}
-- **[{{ post.title }}]({{ post.url }})** <small>{{ post.date | date_to_long_string }}</small>
-{% endfor %}
+- [{{ post.title }}]({{ post.url }}) <small>{{ post.date | date: "%B %d, %Y" }}</small>
+{% endfor %}{: #posts }
 
 # <span id="terminal" onclick="surprise()"></span>
 
