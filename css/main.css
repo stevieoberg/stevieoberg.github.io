@@ -110,6 +110,10 @@ li p {
     margin: .1em;
 }
 
+#terminal {
+    font-size: 2em;
+}
+
 /* FOOTER */
 
 footer {

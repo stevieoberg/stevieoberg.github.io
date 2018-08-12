@@ -23,6 +23,7 @@
             <main>
                 {{ content }}
 
+                <h2 id="terminal" onclick="surprise()"></h2>
             </main>
             <footer>
                 {% if page.url != "/" %}
@@ -31,7 +32,33 @@
                     &#x2665;
                 {% endif %}
             </footer>
+
+
+            <script src="{{ site.url }}/js/baffle.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/1.0.0/typewriter.js"></script>
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
         </div>
+
+        <script>
+            var terminal = document.getElementById('terminal');
+            var typewriter = new Typewriter(terminal, {
+                cursor: '_'
+            });
+
+            function surprise() {
+                typewriter.typeString('Hello! ;)')
+                    .pauseFor(2500)
+                    .deleteAll()
+                    .start();
+            }
+
+            var b = window.baffle('h1',
+                {
+                    characters: 'b6c7807bb10b5d867000▓░█ ▒░▒▓░ ▒░░▓> ▒█▓ █░><▒ █▒█▓ ▓░/ ▓▓/█ █▓▒',
+                    speed: 45
+                });
+            b.start().once().reveal(2000, 50);
+
+        </script>
     </body>
 </html>

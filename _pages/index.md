@@ -27,21 +27,3 @@ Hi! I’m **Stevie Oberg** and I like creating things that are useful and/or bea
 {% for post in site.posts %}
 - [{{ post.title }}]({{ post.url }}) <small>{{ post.date | date: "%B %d, %Y" }}</small>
 {% endfor %}{: #posts }
-
-# <span id="terminal" onclick="surprise()"></span>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/1.0.0/typewriter.js"></script>
-
-<script>
-    var terminal = document.getElementById('terminal');
-    var typewriter = new Typewriter(terminal, {
-        cursor: '_'
-    });
-
-    function surprise() {
-        typewriter.typeString('Hello! ;)')
-            .pauseFor(2500)
-            .deleteAll()
-            .start();
-    }
-</script>
