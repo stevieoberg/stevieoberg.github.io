@@ -1,15 +1,14 @@
 ---
 layout: default
 ---
-{% capture time %}{{ content | reading_time }}{% endcapture %}
 
-<h1>{{ page.title }}</h1>
-<small><em>This post was written on <strong>{{ page.date | date_to_long_string}}</strong> and should take about <strong>{{ content | reading_time | pluralize: "minute" }}</strong> to read. </em></small>
-<hr>
-<section>
+<div id="metadata">
+    <h1>{{ page.title }}</h1>
+    <small>{{ page.date | date: "%m/%d/%y" }}</small>
+</div>
+<article>
     {{ content }}
-</section>
-<hr>
+</article>
 <section>
     <div class="row align-items-center">
         {% for image in page.images %}
