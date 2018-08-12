@@ -118,6 +118,13 @@ li p {
     margin: .1em;
 }
 
+#selfie {
+    width: 13em;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
 /* nav */
 
 nav {
