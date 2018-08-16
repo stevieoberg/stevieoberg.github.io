@@ -4,19 +4,25 @@ email: hi@steviecreates.com
 description: >-
     Coder. Writer. Creator.
 url: "http://www.steviecreates.com/"
-twitter: stevieoberg
+username: stevieoberg
 
 # Site Settings
 collections:
-  posts:
-    output: true
+    posts:
+        output: true
+    assets:
+        output: true
+
 defaults:
-    - values:
-        layout: default
     - scope:
-        path: "_posts"
+        path: ""
       values:
-        layout: post
+        layout: "default"
+    - scope:
+        type: "posts"
+      values:
+        layout: "post"
+        custom_css: post
 
 # Build settings
 pre-commit:

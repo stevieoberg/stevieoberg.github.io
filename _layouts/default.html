@@ -7,24 +7,58 @@
         <meta name="description" content="{{ site.description }}"/>
 
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css" />
+        {% if page.custom_css %}
+            {% for style in page.custom_css %}
+                <link rel="stylesheet" href="{{ site.url }}/assets/css/{{ style }}.css">
+            {% endfor %}
+        {% endif %}
     </head>
     <body>
-        <header>
-            <a href="/">{{ site.title }}</a>
-            <small>{{ site.description }}</small>
-        </header>
-        <main>
-            {{ content }}
-            <h1><blink>_</blink></h1>
-        </main>
-        <footer>
-            {% if page.url != "/" %}
-            <a href="/">&#x1F3E0;</a>
-            {% else %}
-                &#x2665;
-            {% endif %}
-        </footer>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <div id="content">
+            <header>
+                <a href="/">{{ site.title }}</a>
+                <small>{{ site.description }}</small>
+            </header>
+            <main>
+                {{ content }}
+
+                <h2 id="terminal" onclick="surprise()"></h2>
+            </main>
+            <footer>
+                {% if page.url != "/" %}
+                <a href="/">&#x1F3E0;</a>
+                {% else %}
+                    &#x2665;
+                {% endif %}
+            </footer>
+
+
+            <script src="{{ site.url }}/assets/js/baffle.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/1.0.0/typewriter.js"></script>
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        </div>
+
+        <script>
+            var terminal = document.getElementById('terminal');
+            var typewriter = new Typewriter(terminal, {
+                cursor: '_'
+            });
+
+            function surprise() {
+                typewriter.typeString('Hello! ;)')
+                    .pauseFor(2500)
+                    .deleteAll()
+                    .start();
+            }
+
+            var b = window.baffle('h1',
+                {
+                    characters: 'b6c7807bb10b5d867000▓░█ ▒░▒▓░ ▒░░▓> ▒█▓ █░><▒ █▒█▓ ▓░/ ▓▓/█ █▓▒',
+                    speed: 45
+                });
+            b.start().once().reveal(2000, 50);
+
+        </script>
     </body>
 </html>

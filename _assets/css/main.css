@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Roboto:300,400');
+:root {
+    --terminal-color: #191e27;
+    --font-color: #afafbf;
+    --light-grey: #ebe6e6;
+    --purple: #5F5785;
+    --dark-grey: #333945;
+    --pink: #c17bb8;
+    --code-font: 'Inconsolata', monospace;
+}
+
+/* BASE */
+
+body {
+    background-color: var(--purple);
+    color: var(--font-color);
+    margin: 5em auto 1em auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 800px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+a {
+    color: #3a92c8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--white);
+}
+
+h1, h2, h3, h4, h5, h6, b {
+    font-weight: 600;
+    font-family: var(--code-font);
+    color: var(--purple);
+}
+
+h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
+    content: "> ";
+    color: var(--pink);
+}
+
+strong, em, blockquote {
+    color: var(--pink);
+}
+
+blockquote {
+    font-style: italic;
+}
+
+/* HEADER */
+
+header {
+    display: block;
+    margin-bottom: 1.5em;
+    font-size: 1.75rem;
+    font-weight: bold;
+    letter-spacing: .06em;
+}
+
+header a {
+    color: var(--terminal-color);
+}
+
+header small {
+    font-size: 1rem;
+    line-height: 3.15rem;
+    float: right;
+}
+
+header::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+/* CONTENT */
+
+#content {
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
+main {
+    border-top: 20px solid var(--font-color);
+    border-radius: 5px;
+    background: var(--terminal-color);
+    padding: 1em;
+    min-height: 45em;
+}
+
+/* IMAGES */
+
+img {
+    max-width: 100%;
+}
+
+/* MISC */
+
+code {
+    background: var(--dark-grey);
+    font-family: var(--code-font);
+}
+
+li p {
+    margin: .1em;
+}
+
+#terminal {
+    font-size: 2em;
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 2.25em;
+    padding: 1.5em 0em 4em 0em;
+    text-align: center;
+}

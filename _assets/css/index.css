@@ -1,0 +1,41 @@
+/* IMAGES */
+
+#selfie {
+    width: 13em;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Social Media Links */
+
+#social {
+    text-align: center;
+    margin: 2em auto 1.5em auto;
+    font-weight: normal;
+    font-size: 1.75em;
+}
+
+#social i {
+    padding: 0em .5em;
+}
+
+/* DISPLAY POSTS */
+
+#posts {
+    display: block;
+    margin-bottom: 1.5em;
+    letter-spacing: .06em;
+    line-height: 2.5em;
+    padding-left: 0;
+    list-style: none;
+}
+
+#posts a {
+    font-weight: bold;
+}
+
+#posts small {
+    font-style: italic;
+    float: right;
+}
