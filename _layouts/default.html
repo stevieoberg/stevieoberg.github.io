@@ -5,12 +5,13 @@
         <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0"/>
         <title>{{ site.title }} {% if page.title %} - {{ page.title }} {% endif %}</title>
         <meta name="description" content="{{ site.description }}"/>
+        <link rel="icon" type="image/png" href="/favicon.ico">
 
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css" />
+        <link rel="stylesheet" href="/assets/css/main.css" />
         {% if page.custom_css %}
             {% for style in page.custom_css %}
-                <link rel="stylesheet" href="{{ site.url }}/assets/css/{{ style }}.css">
+                <link rel="stylesheet" href="/assets/css/{{ style }}.css">
             {% endfor %}
         {% endif %}
     </head>
@@ -34,7 +35,7 @@
             </footer>
 
 
-            <script src="{{ site.url }}/assets/js/baffle.js"></script>
+            <script src="/assets/js/baffle.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/1.0.0/typewriter.js"></script>
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
         </div>
