@@ -4,7 +4,7 @@ custom_css: index
 ---
 
 
-![Its a Me, Stevie](/img/selfie.jpg){: #selfie }
+![Its a Me, Stevie](assets/img/selfie.jpg){: #selfie }
 
 Hi! I’m **Stevie Oberg** and I like creating things that are useful and/or beautiful. Usually using code but also through art and writing. I'm currently working as an **IT Developer** but one day I hope to combine my love of tech and books to become a Librarian.
 
