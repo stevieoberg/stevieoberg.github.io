@@ -1,0 +1,96 @@
+main {
+    background: $content-background;
+    border-radius: 5px;
+    border-top: 20px solid $font-color;
+    min-height: 45em;
+    padding: 1em 2em;
+}
+
+.terminal {
+    font-size: 2em;
+}
+
+.typewriter-cursor,
+.typewriter-char {
+    &::before {
+        content: '';
+    }
+}
+
+.focus {
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    width: 13em;
+}
+
+.social {
+    font-size: 1.75em;
+    font-weight: normal;
+    margin: 2em auto 1.5em;
+    text-align: center;
+
+    i {
+        padding: .5em;
+    }
+}
+
+.posts {
+    display: block;
+    letter-spacing: .06em;
+    line-height: 2.5em;
+    list-style: none;
+    margin-bottom: 1.5em;
+    padding-left: 0;
+
+    a {
+        font-weight: bold;
+    }
+
+    small {
+        float: right;
+        font-style: italic;
+    }
+}
+
+.metadata {
+    display: block;
+    font-weight: bold;
+    letter-spacing: .06em;
+    margin-bottom: 1.5em;
+
+    h1 {
+        display: inline;
+        font-size: 2.5em;
+        margin-bottom: 0;
+    }
+
+    small {
+        float: right;
+        font-style: italic;
+    }
+
+    &::after {
+        clear: both;
+        content: '';
+        display: block;
+    }
+}
+
+.book-meta {
+    float: right;
+    font-size: .9em;
+    margin-left: 1.5em;
+    width: 25%;
+
+    img {
+        width: 100%;
+    }
+
+    a,
+    p {
+        display: block;
+        margin: 0 auto 0 0;
+        text-align: right;
+    }
+}

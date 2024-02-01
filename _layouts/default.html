@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0"/>
+        <title>{{ site.title }} {% if page.title %} - {{ page.title }} {% endif %}</title>
+        <meta name="description" content="{{ site.description }}"/>
+        <link rel="icon" type="image/png" href="/favicon.ico">
+
+        <!-- Custom CSS -->
+        <link type="text/css" rel="stylesheet" href="/assets/styles.css">
+        <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto">
+        <script type="text/javascript" src="/assets/js/baffle.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/1.0.0/typewriter.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="content">
+            <header>
+                <a href="/">{{ site.title }}</a>
+                <small>{{ site.description }}</small>
+            </header>
+
+            <main>
+                {{ content }}
+
+                <h2 id="terminal" class="terminal" onclick="surprise()"></h2>
+            </main>
+
+            <footer>
+                {% if page.url != "/" %}
+                <a href="/">&#x1F3E0;</a>
+                {% else %}
+                    &#x2665;
+                {% endif %}
+            </footer>
+        </div>
+
+        <script>
+            var terminal = document.getElementById('terminal');
+            var typewriter = new Typewriter(terminal, {
+                cursor: '_'
+            });
+
+            function surprise() {
+                typewriter.typeString('{{ page.secret }}')
+                    .pauseFor(2500)
+                    .deleteAll()
+                    .start();
+            }
+
+            var b = window.baffle('h1',
+                {
+                    characters: 'b6c7807bb10b5d867000▓░█ ▒░▒▓░ ▒░░▓> ▒█▓ █░><▒ █▒█▓ ▓░/ ▓▓/█ █▓▒',
+                    speed: 45
+                });
+            b.start().once().reveal(2000, 50);
+
+        </script>
+    </body>
+</html>

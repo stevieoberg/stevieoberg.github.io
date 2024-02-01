@@ -1,0 +1,22 @@
+<script>
+    function format_book(book) {
+        book = book.items[0].volumeInfo;
+        meta = document.getElementById('book-meta');
+
+        const img = document.createElement('img');
+        img.src = book.imageLinks.thumbnail;
+
+        // Create a p and set the text content to the film's description
+        const title = document.createElement('a');
+        title.href = "https://www.amazon.com/dp/{{ include.isbn }}";
+        title.textContent = book.title;
+        const author = document.createElement('p');
+        author.textContent = book.authors[0];
+
+        meta.appendChild(img);
+        meta.appendChild(title);
+        meta.appendChild(author);
+    }
+</script>
+
+<script src="https://www.googleapis.com/books/v1/volumes?q=isbn:{{ include.isbn }}&projection:full&callback=format_book"></script>

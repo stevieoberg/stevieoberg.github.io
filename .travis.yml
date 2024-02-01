@@ -1,0 +1,13 @@
+language: ruby
+install:
+- bundle install
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: "$GH_TOKEN"
+  target_branch: master
+  fqdn: www.steviecreates.com # This updates the repository settings in GitHub and also adds a CNAME file in the master branch
+  keep-history: true
+  verbose: true
+  on:
+    branch: source
