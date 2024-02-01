@@ -195,3 +195,8 @@ footer {
   padding: 1.5em 0 4em;
   text-align: center;
 }
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  display: none;
+}

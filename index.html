@@ -22,6 +22,9 @@
       integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
       crossorigin="anonymous"
     />
+
+    <!-- Custom Scripts -->
+    <script type="text/javascript" src="navigation.js"></script>
   </head>
   <body>
     <div class="content">
@@ -62,6 +65,76 @@
           >
             <i class="fab fa-brands fa-goodreads-g"></i>
           </a>
+        </div>
+
+        <h1 id="projects">Projects</h1>
+
+        <ul id="projects">
+          <li>
+            <a class="tablink" onclick="openPage('Picard', this)">
+              Picard Biography
+            </a>
+          </li>
+          <li>
+            <a class="tablink" onclick="openPage('SaveTheWhales', this)">
+              Save the Whales
+            </a>
+          </li>
+          <li>
+            <a class="tablink" onclick="openPage('SnoBalls', this)">
+              SnoBalls
+            </a>
+          </li>
+          <li>
+            <a class="tablink" onclick="openPage('OnTheRadar', this)">
+              On the Radar
+            </a>
+          </li>
+        </ul>
+
+        <div id="Picard" class="tabcontent">
+          <h3>Picard</h3>
+          <div>
+            <img src="projects/picard_biography.png" />
+            Web Design 1 Project 1: Using Typography to design a website.
+          </div>
+          <a href="/picard_biography">See in Action</a> |
+          <a href="https://github.com/stevieoberg/picard_biography"
+            >View the Code</a
+          >
+        </div>
+
+        <div id="SaveTheWhales" class="tabcontent">
+          <h3>Save the Whales</h3>
+          <div>
+            <img src="projects/save_the_whalesharks.png" />
+            Web Design 1 Project 2: Playing with color and images by creating a
+            Non-Profit, Animal Conservation Site.
+          </div>
+          <a href="/savethewhalesharks">See in Action</a> |
+          <a href="https://github.com/stevieoberg/savethewhalesharks"
+            >View the Code</a
+          >
+        </div>
+
+        <div id="SnoBalls" class="tabcontent">
+          <h3>SnoBalls</h3>
+          <div>
+            <img src="projects/sno_balls.png" />
+            Web Design 1 Project 3: Playing around with CSS.
+          </div>
+          <a href="/snoballs">See in Action</a> |
+          <a href="https://github.com/stevieoberg/snoballs">View the Code</a>
+        </div>
+
+        <div id="OnTheRadar" class="tabcontent">
+          <h3>On the Radar</h3>
+          <div>
+            <img src="projects/on_the_radar.png" />
+            Software Engineering I Project: Develop a website to help advisors
+            and students curate a well-balanced course-load. The site was
+            written in PHP.
+          </div>
         </div>
       </main>
 
