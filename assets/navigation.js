@@ -1,17 +1,13 @@
-function openPage(pageName, elmnt) {
-  // Hide all elements with class="tabcontent" by default */
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
+function openPage(contentClass, pageName) {
+  // Hide all content elements by default */
+  var content = document.getElementsByClassName(contentClass);
 
-  // Remove the background color of all tablinks/buttons
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
+  for (var i = 0; i < content.length; i++) {
+    content[i].style.display = "none";
   }
 
   // Show the specific tab content
   document.getElementById(pageName).style.display = "block";
 }
+
+var openProject = (id) => openPage("projectContent", id);
