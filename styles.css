@@ -1,0 +1,197 @@
+body {
+  background-color: #5f5785;
+  color: #c1c1d6;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  margin: 5em auto 1em;
+  max-width: 800px;
+}
+
+.content {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+a {
+  color: #3a92c8;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ebe6e6;
+}
+
+strong,
+em,
+blockquote {
+  color: #c17bb8;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b {
+  color: #8077aa;
+  font-family: "Inconsolata", monospace;
+  font-weight: 600;
+}
+
+h1::before,
+h2::before,
+h3::before,
+h4::before,
+h5::before,
+h6::before,
+b::before {
+  color: #c17bb8;
+  content: "> ";
+}
+
+code {
+  background: #333945;
+  font-family: "Inconsolata", monospace;
+}
+
+li p {
+  margin: 0.1em;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  margin-bottom: 1.5em;
+}
+
+header a {
+  color: #191e27;
+}
+
+header small {
+  float: right;
+  font-size: 1rem;
+  line-height: 3.15rem;
+}
+
+header::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+main {
+  background: #191e27;
+  border-radius: 5px;
+  border-top: 20px solid #afafbf;
+  min-height: 45em;
+  padding: 1em 2em;
+}
+
+.terminal {
+  font-size: 2em;
+}
+
+.typewriter-cursor::before,
+.typewriter-char::before {
+  content: "";
+}
+
+.focus {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  width: 13em;
+}
+
+.social {
+  font-size: 1.75em;
+  font-weight: normal;
+  margin: 2em auto 1.5em;
+  text-align: center;
+}
+
+.social i {
+  padding: 0.5em;
+}
+
+.posts {
+  display: block;
+  letter-spacing: 0.06em;
+  line-height: 2.5em;
+  list-style: none;
+  margin-bottom: 1.5em;
+  padding-left: 0;
+}
+
+.posts a {
+  font-weight: bold;
+}
+
+.posts small {
+  float: right;
+  font-style: italic;
+}
+
+.metadata {
+  display: block;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  margin-bottom: 1.5em;
+}
+
+.metadata h1 {
+  display: inline;
+  font-size: 2.5em;
+  margin-bottom: 0;
+}
+
+.metadata small {
+  float: right;
+  font-style: italic;
+}
+
+.metadata::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.book-meta {
+  float: right;
+  font-size: 0.9em;
+  margin-left: 1.5em;
+  width: 25%;
+}
+
+.book-meta img {
+  width: 100%;
+}
+
+.book-meta a,
+.book-meta p {
+  display: block;
+  margin: 0 auto 0 0;
+  text-align: right;
+}
+
+footer {
+  margin-top: 2.25em;
+  padding: 1.5em 0 4em;
+  text-align: center;
+}
